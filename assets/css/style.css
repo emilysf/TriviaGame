@@ -1,0 +1,17 @@
+body {
+	background-image: url(../images/bg.jpg);
+	background-position: left;
+}
+.container {
+	margin-top: 5%;
+	background-image: url(../images/paper.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	width:700px;
+	height:600px;
+}
+
+h1 {
+	text-align: center;
+}
+
