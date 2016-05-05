@@ -47,12 +47,6 @@ quiz = [
 	start();
 	function start(event) {
 		$(document.createElement('h3')).addClass('question').attr('id', 'question').text(quiz[0]['question']).appendTo('#question');
-		$(document.createElement('h3')).addClass('question').attr('id', 'question').text(quiz[1]['question']).appendTo('#question');
-		$(document.createElement('h3')).addClass('question').attr('id', 'question').text(quiz[2]['question']).appendTo('#question');
-		$(document.createElement('h3')).addClass('question').attr('id', 'question').text(quiz[3]['question']).appendTo('#question');
-		$(document.createElement('h3')).addClass('question').attr('id', 'question').text(quiz[4]['question']).appendTo('#question');
-		$(document.createElement('h3')).addClass('question').attr('id', 'question').text(quiz[5]['question']).appendTo('#question');
-		$(document.createElement('h3')).addClass('question').attr('id', 'question').text(quiz[6]['question']).appendTo('#question');
 	};
 
 	
@@ -71,7 +65,7 @@ quiz = [
     }
     return list;
   	};
-		//$('#answers').append(radioButtons());
+		$('#answers').append(radioButtons());
 
 	
 
@@ -80,7 +74,10 @@ quiz = [
   	};
   	choose();
 
-  
+  	("#next").on("click", function(){
+  		$(document.createElement('h3')).addClass('question').attr('id', 'question').text(quiz[1]['question']).appendTo('#question');
+
+  	});
 
 });
 
