@@ -7,8 +7,7 @@
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 	<!--javascript/jquery-->
-	<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.js"></script>
-	<script type="text/javascript" src="assets/javascript/app.js"></script>
+	
 	<!--font-->
 	<link rel="stylesheet" 
 
@@ -20,14 +19,20 @@
 			<h1>Harry Potter Trivia</h1>
 		</div>
 		<div class="row">
-			<div id="time"><h4>30 Seconds</h4></div>
-			<span><div id="questionNumber"><h2>Question 1</h2></div></span>
+			<div id="time"><h4>Time Remaining: 30 seconds</h4></div>
+			<div id="questionNumber"><h2>Question 1</h2></div>
 		</div>
 		<div class="row">
+			<div id="question"></div>
 			<div id="answers"></div>
 		</div>
-
+		<div class="row">
+			<br>
+			<div class="button" id="next"><a href="#"><p>Next</p></a></div>
+		</div>
 
 	</div>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.js"></script>
+	<script type="text/javascript" src="assets/javascript/app.js"></script>
 </body>
 </html>

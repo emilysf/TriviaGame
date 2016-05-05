@@ -28,8 +28,22 @@ h2 {
 	text-align: center;
 	font-family:lumosFont !important;
 }
+h3 {
+	text-align: center;
+	font-family:lumosFont !important;
+}
 h4 {
 	text-align: center;
 	font-family:lumosFont !important;
 }
-
+h5 {
+	text-align: center;
+}
+p {
+	text-align: center;
+	font-family:lumosFont !important;
+	color:#000;
+}
+a:hover {
+	text-decoration: none !important;
+}
