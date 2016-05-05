@@ -17,7 +17,7 @@ body {
 	background-repeat: no-repeat;
 	background-position: center;
 	width:700px;
-	height:600px;
+	height:auto;
 }
 h1 {
 	text-align: center;
@@ -47,3 +47,12 @@ p {
 a:hover {
 	text-decoration: none !important;
 }
+
+li {
+	display:inline;
+	margin-left: 13%;
+}
+li:not(:first-child){
+	margin-left: 5%;
+}
+

@@ -3,54 +3,39 @@ $(document).ready(function() {
 
 quiz = [
 	{
-		question: "Vho is the Chosen One",
+		question: "Vho is the Chosen One?",
 		answers: [" Ron Weasley", " Voldemort", " Dudley Dursley", " Harry Potter"],
 		correct: 3
 	},
 	{
-		question: "Who are Harry Potter's best friends?",
+		question: "Vho are Harry Potter's best friends?",
 		answers: [" Crabbe and Goyle", " Ron and Hermione", " Malfoy and Neville", " Fred and George"],
 		correct: 1
 	},
 	{
-		question: "Who is the headmaster of Hogwarts?",
+		question: "Vho is the headmaster of Hogvarts?",
 		answers: [" Albus Dumbledore", " Severus Snape", " Molly Weasley", " Minerva McGonagall"],
 		correct: 0
 	},
 	{
-		question: "What is the name of the house elf Harry befriends?",
+		question: "Vhat is the name of the house elf Harry befriends?",
 		answers: [" Dobby", " Winky", " Hedwig", " Scabbers"],
 		correct: 0
 	},
 	{
-		question: "How many houses are there at Hogwarts?",
+		question: "Hov many houses are there at Hogvarts?",
 		answers: [" 1", " 2", " 3", " 4"],
 		correct: 3
 	},
 	{
-		question: "How many books are in the Harry Potter series?",
+		question: "Hov many books are in the Harry Potter series?",
 		answers: [" 4", " 7", " 1", " 6"],
 		correct: 1
 	},
 	{
-		question: "What is the name of Harry's owl?",
+		question: "Vhat is the name of Harry's ovl?",
 		answers: [" Fang", " Fawkes", " Hedwig", " Buckbeak"],
 		correct: 2
-	},
-	{
-		question: "Who disguised themself as a rat named Scabbers?",
-		answers: [" Draco Malfoy", " Peter Pettigrew", " Sirius Black", " Bellatrix Lestrange"],
-		correct: 1
-	},
-	{
-		question: "Who is Harry Potter's godfather?",
-		answers: [" Vernon Dursley", " Arthur Weasley", " Albus Dumbledore", " Sirius Black"],
-		correct: 3
-	},
-	{
-		question: "What house is Harry, Ron, and Hermione in at Hogwarts?",
-		answers: [" Gryffindor", " Hufflepuff", " Ravenclaw", " Slytherin"],
-		correct: 0
 	}
 	];
 
@@ -59,19 +44,26 @@ quiz = [
 	var incorrect = 0;
 	quizOver = false;
 
+	start();
 	function start(event) {
 		$(document.createElement('h3')).addClass('question').attr('id', 'question').text(quiz[0]['question']).appendTo('#question');
+		$(document.createElement('h3')).addClass('question').attr('id', 'question').text(quiz[1]['question']).appendTo('#question');
+		$(document.createElement('h3')).addClass('question').attr('id', 'question').text(quiz[2]['question']).appendTo('#question');
+		$(document.createElement('h3')).addClass('question').attr('id', 'question').text(quiz[3]['question']).appendTo('#question');
+		$(document.createElement('h3')).addClass('question').attr('id', 'question').text(quiz[4]['question']).appendTo('#question');
+		$(document.createElement('h3')).addClass('question').attr('id', 'question').text(quiz[5]['question']).appendTo('#question');
+		$(document.createElement('h3')).addClass('question').attr('id', 'question').text(quiz[6]['question']).appendTo('#question');
 	};
 
-	start();
+	
 
     function radioButtons(event) {
-    var list = $('<ul>');
+    var list = $('<li>');
     var item;
     var input = '';
     
     for (var i = 0; i < quiz[0].answers.length; i++) {
-      item = $('<h5><li></h5>');
+      item = $('<li>');
       input = '<input type="radio" name="answer" value= ' + i +' />';
       input += quiz[0].answers[i];
       item.append(input);
@@ -79,12 +71,14 @@ quiz = [
     }
     return list;
   	};
-	$('#answers').append(radioButtons());
+		//$('#answers').append(radioButtons());
+
+	
 
 	function choose() {
-    answers[questionNumber] = +$('input[name="answer"]:checked').val();
-  };
-  choose();
+    	answers[questionNumber] = +$('input[name="answer"]:checked').val();
+  	};
+  	choose();
 
   
 
