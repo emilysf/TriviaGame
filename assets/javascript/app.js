@@ -57,17 +57,16 @@ quiz = [
 	var questionNumber = 0;
 	var correctAnswers = 0;
 	var incorrect = 0;
-	var notanswered = 0;
-	var answered = 0;
+	quizOver = false;
 
-	function startQuiz(event) {
+	function start(event) {
 		$(document.createElement('h3')).addClass('question').attr('id', 'question').text(quiz[0]['question']).appendTo('#question');
 	};
 
-	startQuiz();
+	start();
 
     function radioButtons(event) {
-    var radioList = $('<ul>');
+    var list = $('<ul>');
     var item;
     var input = '';
     
@@ -76,15 +75,21 @@ quiz = [
       input = '<input type="radio" name="answer" value= ' + i +' />';
       input += quiz[0].answers[i];
       item.append(input);
-      radioList.append(item);
+      list.append(item);
     }
-    return radioList;
+    return list;
   	};
 	$('#answers').append(radioButtons());
 
+	function choose() {
+    answers[questionNumber] = +$('input[name="answer"]:checked').val();
+  };
+  choose();
 
-
+  
 
 });
+
+
   
 
